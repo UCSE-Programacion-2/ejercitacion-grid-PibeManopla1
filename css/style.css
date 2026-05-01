@@ -187,7 +187,7 @@ img {
 
 
 .switch, .follow {
-  color: #00a8f3; /* Un azul un toque más brillante parecido al del Figma */
+  color: #00a8f3; 
   font-weight: 600;
   font-size: 13px;
   text-decoration: none;
@@ -214,4 +214,14 @@ img {
 .suggestion-item strong {
   font-size: 14px;
   flex-grow: 1; 
+}
+
+.footer {
+  background-color: #262626; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 15px 0;
+  font-size: 12px; 
+  margin-top: 40px; 
+  width: 100%;
 }

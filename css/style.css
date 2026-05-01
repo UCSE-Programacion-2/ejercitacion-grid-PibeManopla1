@@ -22,7 +22,13 @@ img {
   height: auto;
 }
 
-/* TODO alumno:
-   Aplicar Grid en .exercice y .excercice-incomplete
-   con enfoque Mobile First + media queries.
-*/
+.exercice {
+  display: grid;
+  gap: 2rem; 
+  margin-top: 2rem;
+}
+
+.exercice-incomplete {
+  display: grid;
+  gap: 10px; 
+}

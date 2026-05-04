@@ -6,23 +6,247 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  color: #1f1f1f;
-}
-
-.container {
-  width: min(100%, 960px);
-  margin: 0 auto;
-  padding: 1rem;
+  background: #fafafa; 
+  color: #262626;
 }
 
 img {
-  display: block;
   max-width: 100%;
-  height: auto;
+  display: block;
 }
 
-/* TODO alumno:
-   Aplicar Grid en .exercice y .excercice-incomplete
-   con enfoque Mobile First + media queries.
-*/
+.profile-pic-mini img,
+.story-item img,
+.avatar img,
+.avatar-large img,
+.avatar-small img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-pic-mini img { width: 30px; height: 30px; }
+
+.avatar img { width: 35px; height: 35px; }
+
+.avatar-large img { width: 56px; height: 56px; }
+
+.avatar-small img { width: 32px; height: 32px; }
+
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  width: min(100%, 935px); 
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+
+.sidebar {
+  display: none;
+}
+
+
+.header { 
+  border-bottom: 1px solid #dbdbdb; 
+  background: white; 
+  padding: 10px 0; 
+}
+
+.header-content { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 60px;
+  width: min(100%, 935px); 
+  margin: 0 auto; 
+  padding: 0 15px;
+}
+
+
+.search-input {
+  display: none;
+  width: 250px; 
+  padding: 8px 12px; 
+  background-color: #fafafa; 
+  border: 1px solid #dbdbdb; 
+  border-radius: 6px; 
+  text-align: left; 
+  color: #262626; 
+  outline: none; 
+}
+
+.search-input::placeholder {
+  color: #8e8e8e;
+}
+
+
+.header { border-bottom: 1px solid #dbdbdb; background: white; padding: 10px 0; }
+.header-content { display: flex; justify-content: space-between; width: min(100%, 935px); margin: 0 auto; padding: 0 15px;}
+
+.stories { 
+  display: flex; 
+  gap: 21px; padding: 15px; 
+  background: white; 
+  border: 1px solid #dbdbdb; 
+  border-radius: 3px; 
+  overflow-x: auto; 
+  justify-content: space-between; 
+}
+
+.post { background: white; border: 1px solid #dbdbdb; border-radius: 3px; margin-top: 20px; }
+
+
+.post-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #efefef; 
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.user-info .username {
+  font-weight: 600; 
+  font-size: 14px;
+}
+
+.options {
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+
+.post-img-container {
+  padding: 0 15px; 
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 4px; 
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px; 
+  padding: 15px 15px 10px 15px;
+}
+
+.post-actions .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+.post-comments {
+  padding: 0 15px 15px 15px;
+  font-size: 14px;
+  line-height: 1.6; 
+}
+
+.post-comments p {
+  margin-bottom: 4px;
+}
+
+.view-comments {
+  color: #8e8e8e;
+  font-size: 13px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.story-item:nth-child(n+5) {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  
+  .search-input {
+    display: block; 
+  }
+
+  .main-container {
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+  }
+
+  .stories {
+    justify-content: flex-start;
+  }
+
+.story-item:nth-child(n+5) {
+    display: block; 
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
+.my-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px; 
+}
+
+.my-profile .avatar-large {
+  margin-right: 15px; 
+}
+
+.my-profile .names {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+
+
+
+.switch, .follow {
+  color: #00a8f3; 
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+
+.suggestions h4 {
+  font-weight: 600;
+  color: #8e8e8e;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
+}
+
+.suggestion-item .avatar-small {
+  margin-right: 15px;
+}
+
+.suggestion-item strong {
+  font-size: 14px;
+  flex-grow: 1; 
+}
+
+.footer {
+  background-color: #262626; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 15px 0;
+  font-size: 12px; 
+  margin-top: 40px; 
+  width: 100%;
+}

@@ -1,57 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ejercicio Grid</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <img
-          src="img/logo-DM.png"
-          alt="Logo DM"
-        />
-      </div>
-      <h3>🤯Rompecabezas!</h3>
-      <div class="exercice">
-        <!--Lado Completo-->
-        <div class="exercice-complete">
-          <img
-            src="img/final.jpg"
-            alt="rompecabezas completo"
-          />
-        </div>
-        <!--Lado Incompleto-->
-        <div class="excercice-incomplete">
-          <div class="grid-one">
-            <img
-              src="img/1.jpg"
-              alt="image 1"
-            />
-          </div>
-          <div class="grid-two">
-            <img
-              src="img/2.jpg"
-              alt="image 2"
-            />
-          </div>
-          <div class="grid-three">
-            <img
-              src="img/3.jpg"
-              alt="image 3"
-            />
-          </div>
-          <div class="grid-four">
-            <img
-              src="img/4.jpg"
-              alt="image 4"
-            />
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaFront</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <h2>InstaFront</h2>
+      <input type="text" placeholder="Buscador..." class="search-input">
+      <div class="profile-pic-mini">
+        <img src="img/ContainerPerfil.png" alt="Perfil">
+      </div> 
     </div>
-  </body>
+
+  </header>
+
+
+  <main class="main-container">
+    
+    <!-- Historias y Feed -->
+    <section class="feed">
+      <!-- Historias -->
+      <div class="stories">
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div> 
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+        <div class="story-item">
+            <img src="img/ContainerPerfil.png" alt="Story">
+        </div>
+      </div>
+
+      <!-- Posteo principal -->
+
+      <article class="post">
+        
+        <div class="post-header">
+          <div class="user-info">
+            <div class="avatar">
+                <img src="img/ContainerPerfil.png" alt="Perfil">
+            </div> 
+            <span class="username">Abril González</span>
+          </div>
+          <span class="options">...</span>
+        </div>
+        
+        <!-- Imagen grande del post -->
+        <div class="post-img-container">
+            <img src="img/fotoPerfil.png" alt="Post de Abril" class="post-img">
+        </div>
+        
+        <div class="post-actions">
+          <img src="img/heart.png" alt="Me gusta" class="icon">
+          <img src="img/comment.png" alt="Comentar" class="icon">
+          <img src="img/paper.png" alt="Enviar" class="icon">
+          <img src="img/smile.png" alt="Emoji" class="icon">
+        </div>
+        
+        <div class="post-comments">
+          <p class="likes-count"><strong>Les gusta a fulpringles y otras personas</strong></p>
+          <p class="view-comments">Ver los 3,672 comentarios</p>
+          <p><strong>Gabriela Munich</strong> Hola! que placer verte en frontend!!</p>
+          <p><strong>Jonathan Gonzalez</strong> Te estábamos esperando!! Vamooh!</p>
+        </div>
+
+      </article>
+    </section>
+
+
+    <aside class="sidebar">
+      <div class="my-profile">
+        <div class="avatar-large">
+            <img src="img/ContainerPerfil.png" alt="Perfil">
+        </div>
+       <div class="names">
+          <strong>Abril.gonzalez53</strong>
+          <span>ABRIL 👻</span>
+        </div>
+        <a href="#" class="switch">Cambiar</a>
+      </div>
+      
+      <div class="suggestions">
+        <h4>Sugerencias para ti</h4>
+        
+        <div class="suggestion-item">
+          <div class="avatar-small">
+              <img src="img/ContainerPerfil.png" alt="Perfil">
+          </div>
+          <strong>Jonathan Gonzalez</strong>
+          <a href="#" class="follow">Seguir</a>
+        </div>
+
+        <div class="suggestion-item">
+          <div class="avatar-small">
+              <img src="img/ContainerPerfil.png" alt="Perfil">
+          </div>
+          <strong>Gabriela Munich</strong>
+          <a href="#" class="follow">Seguir</a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    <p>Todos los derechos reservados a Segovia Santiago L.U </p>
+  </footer>
+
+</body>
 </html>

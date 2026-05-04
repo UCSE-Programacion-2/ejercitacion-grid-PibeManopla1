@@ -66,6 +66,7 @@ img {
 
 
 .search-input {
+  display: none;
   width: 250px; 
   padding: 8px 12px; 
   background-color: #fafafa; 
@@ -83,8 +84,17 @@ img {
 
 .header { border-bottom: 1px solid #dbdbdb; background: white; padding: 10px 0; }
 .header-content { display: flex; justify-content: space-between; width: min(100%, 935px); margin: 0 auto; padding: 0 15px;}
+
 .stories { 
-  display: flex; gap: 21px; padding: 15px; background: white; border: 1px solid #dbdbdb; border-radius: 3px; overflow-x: auto; }
+  display: flex; 
+  gap: 21px; padding: 15px; 
+  background: white; 
+  border: 1px solid #dbdbdb; 
+  border-radius: 3px; 
+  overflow-x: auto; 
+  justify-content: space-between; 
+}
+
 .post { background: white; border: 1px solid #dbdbdb; border-radius: 3px; margin-top: 20px; }
 
 
@@ -153,14 +163,29 @@ img {
   cursor: pointer;
 }
 
+.story-item:nth-child(n+5) {
+  display: none;
+}
+
+
 @media (min-width: 768px) {
   
+  .search-input {
+    display: block; 
+  }
 
   .main-container {
     grid-template-columns: 2fr 1fr; 
     gap: 30px;
   }
 
+  .stories {
+    justify-content: flex-start;
+  }
+
+.story-item:nth-child(n+5) {
+    display: block; 
+  }
 
   .sidebar {
     display: block;
